@@ -5,8 +5,9 @@
     "scripts": {
         "start:server": "json-server --watch data/products.json --port 3010 --middlewares data/headers.js",
         "start:dev": "concurrently \"npm run start:server\" \"npm run dev\"",
-        "start:prod": "npm run build && concurrently \"npm run start:server\" \"npm run start\"",
+        "start:prod": "concurrently \"npm run start:server\" \"npm run prod\"",
         "dev": "next dev --turbopack",
+        "prod": "npm run build && npm run start",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
