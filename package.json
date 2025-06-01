@@ -1,0 +1,44 @@
+{
+    "name": "next-test",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start:server": "json-server --watch data/products.json --port 3010 --middlewares data/headers.js",
+        "start:dev": "concurrently \"npm run start:server\" \"npm run dev\"",
+        "start:prod": "npm run build && concurrently \"npm run start:server\" \"npm run start\"",
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": " npx playwright test --ui",
+        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@mui/icons-material": "^7.1.0",
+        "@mui/material": "^7.1.0",
+        "@reduxjs/toolkit": "^2.8.2",
+        "concurrently": "^9.1.2",
+        "json-server": "^0.17.0",
+        "next": "15.3.3",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-redux": "^9.2.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@playwright/test": "^1.52.0",
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.3.3",
+        "playwright": "^1.52.0",
+        "tailwindcss": "^4",
+        "typescript": "^5",
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11"
+    }
+}
