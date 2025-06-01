@@ -84,13 +84,12 @@ Install all packages required for project
 
 ### `npm run start:dev`
 
-Runs the app in the development mode.  
+Runs the app in development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run start:prod`
 
-Builds the app for production and serves it using a production server.  
-First, run `npm run build` to create an optimized production build, then run `npm run start:prod` to serve the build.  
+Builds and runs the app in production mode.   
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
